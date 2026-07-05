@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <div class="d-flex align-items-center gap-3">
+        <div class="logo-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+
+        <div class="title-block">
+          <h1>What's For Dinner</h1>
+          <p>Your daily meal inspiration</p>
+        </div>
+      </div>
+      <div class="nav-icons">
+        <button class="nav-icon-btn">
+          <i class="fa-regular fa-bookmark"></i>
+        </button>
+
+        <button class="nav-icon-btn">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </button>
+
+        <button class="nav-icon-btn">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+
+        
+          <img src="./img/avatar-4.jpg" alt="">
+        
+      </div>
+    </nav>
+    <div class="bag">
+      <div class="wrap">
+        <div class="card2">
+          <div class="media" id="mealEmoji">
+            <div class="rating-pill">
+              ⭐ <span id="mealRating"></span>
+              <span class="muted" id="mealReviews"></span>
+            </div>
+
+            <img
+              id="mealImage"
+              src="./img/photo-1467003909585-2f8a72700288.avif"
+              alt="Meal Image"
+            />
+
+            <div class="stats-bar">
+              <div class="stat">
+                <div class="stat-icon">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="label">Prep Time</div>
+                <div class="value" id="prepTime"></div>
+              </div>
+
+              <div class="stat">
+                <div class="stat-icon">
+                  <i class="fa-solid fa-fire"></i>
+                </div>
+                <div class="label">Cook Time</div>
+                <div class="value" id="cookTime"></div>
+              </div>
+
+              <div class="stat">
+                <div class="stat-icon">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="label">Servings</div>
+                <div class="value" id="servings"></div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="content">
+            <div class="tags">
+              <span class="tag difficulty" id="tagDifficulty"></span>
+              <span class="tag cuisine" id="tagCuisine"></span>
+            </div>
+            <h2 id="mealName"></h2>
+            <p class="desc" id="mealDesc"></p>
+
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="ingredients">
+                <i class="fa-solid fa-list-check"></i> Ingredients
+              </button>
+
+              <button class="tab-btn" data-tab="instructions">
+                <i class="fa-solid fa-book-open"></i> Instructions
+              </button>
+
+              <button class="tab-btn" data-tab="nutrition">
+                <i class="fa-solid fa-chart-pie"></i> Nutrition
+              </button>
+
+              <button class="tab-btn" data-tab="tips">
+                <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+              </button>
+            </div>
+
+            <div class="ingredients-box">
+              <div class="tab-panel" id="tabPanel"></div>
+            </div>
+
+            <button class="cta-btn" id="tryAnotherBtn">
+              <span class="spin-icon"
+                ><i class="fa-solid fa-rotate-right spin-icon"></i
+              ></span>
+              Try Another Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
