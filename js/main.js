@@ -375,9 +375,6 @@ document.getElementById("tryAnotherBtn").addEventListener("click", function () {
   currentMeal = getRandomMeal(meals);
   activeTab = "ingredients";
 
-  for (var i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].classList.remove("active");
-  }
   document.querySelector('.tab-btn[data-tab="ingredients"]').classList.add("active");
 
   renderMeal(currentMeal);
