@@ -359,26 +359,7 @@ function renderTab(meal) {
 var currentMeal = getRandomMeal(meals);
 renderMeal(currentMeal);
 
-var tabButtons = document.querySelectorAll(".tab-btn");
-
-for (var i = 0; i < tabButtons.length; i++) {
-  tabButtons[i].addEventListener("click", function () {
-    for (var j = 0; j < tabButtons.length; j++) {
-      tabButtons[j].classList.remove("active");
-    }
-    this.classList.add("active");
-    activeTab = this.dataset.tab;
-    renderTab(currentMeal);
-  });
-}
 document.getElementById("tryAnotherBtn").addEventListener("click", function () {
   currentMeal = getRandomMeal(meals);
-  activeTab = "ingredients";
-
-  for (var i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].classList.remove("active");
-  }
-  document.querySelector('.tab-btn[data-tab="ingredients"]').classList.add("active");
-
   renderMeal(currentMeal);
 });
