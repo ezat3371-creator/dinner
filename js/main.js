@@ -373,10 +373,6 @@ for (var i = 0; i < tabButtons.length; i++) {
 }
 document.getElementById("tryAnotherBtn").addEventListener("click", function () {
   currentMeal = getRandomMeal(meals);
-  activeTab = "ingredients";
-
-  document.querySelector('.tab-btn[data-tab="ingredients"]').classList.add("active");
-
   renderMeal(currentMeal);
 });
 
